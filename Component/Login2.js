@@ -8,7 +8,7 @@ const SCREEN_WIDTH = width
 const ASPECT_RATIO = width / height
 const LATITUDE_DELTA = 0.0922
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO
-//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.78825,-122.4324&radius=500&types=foods&key=AIzaSyDKkvUWoJ8kkfeAqEsjImmRuftKF21z3lI
+//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.78825,-122.4324&radius=500&types=foods&key='your key'
 
 class Invoke extends React.Component {
 constructor() {
