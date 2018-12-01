@@ -50,7 +50,7 @@ loadUserRadiusTypes() {
       const url="https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
       const location=`location=${lat},${long}&radius=${radius}`;
       const typeData=`&types=${types}`;
-      const key=`&key=${api}`; //AIzaSyDKkvUWoJ8kkfeAqEsjImmRuftKF21z3lI
+      const key=`&key=${api}`; 
       return `${url}${location}${typeData}${key}`;
     }
 
