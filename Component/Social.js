@@ -7,7 +7,7 @@ const SCREEN_WIDTH = width
 const ASPECT_RATIO = width / height
 const LATITUDE_DELTA = 0.0922
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO
-//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.78825,-122.4324&radius=500&types=foods&key=AIzaSyDKkvUWoJ8kkfeAqEsjImmRuftKF21z3lI
+//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.78825,-122.4324&radius=500&types=foods&key=''
 
 class Invoke extends React.Component {
 constructor() {
@@ -28,7 +28,7 @@ constructor() {
       const url="https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
       const location=`location=${lat},${long}&radius=${radius}`;
       const typeData=`&types=${types}`;
-      const key=`&key=${api}`; //AIzaSyDKkvUWoJ8kkfeAqEsjImmRuftKF21z3lI
+      const key=`&key=${api}`; 
       return `${url}${location}${typeData}${key}`;
     }
 
@@ -72,7 +72,7 @@ constructor() {
 
     
   getPlaces(){
-    const url=this.getUrlWithParameters(this.state.region.latitude,this.state.region.longitude,500,'atm','AIzaSyDKkvUWoJ8kkfeAqEsjImmRuftKF21z3lI');
+    const url=this.getUrlWithParameters(this.state.region.latitude,this.state.region.longitude,500,'atm','your key');
     fetch(url)
       .then((data)=>data.json())
       .then((res)=>{
